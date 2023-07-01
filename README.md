@@ -1,4 +1,4 @@
-# Python_Analysis_of_Financial_and_Election_Data
+# Python Analysis of Financial and Election Data
 
 <img src="https://www.fortworthtexas.gov/files/assets/public/news/images/city-news-elections-graphic.jpg?dimension=pageimage&w=480">
 
@@ -11,20 +11,14 @@ Two different sets of data were used:
 - [budget_data.csv](https://github.com/ericyang91/Python_Analysis_of_Financial_and_Election_Data/blob/main/PyBank/Resources/budget_data.csv) 
 - [election_data.csv](https://github.com/ericyang91/Python_Analysis_of_Financial_and_Election_Data/blob/main/PyPoll/Resources/election_data.csv)
 
+## Functions Used
 
+- `os.path.join` is used to concatenate multiple path components into a single path string. It intelligently handles the differences in path separators ('/' or '') based on the operating system.
+- `with` Once the code within the with block is executed, the file will be automatically closed, regardless of whether an exception occurs or not. This ensures proper cleanup and prevents resource leaks.
+- `next()` is used to retrieve the next item from an iterator. It allows you to iterate over the elements of an iterable one at a time. It cannot be used on lists.
+- `zip()` is used to combine multiple iterables into a single iterable of tuples. It takes iterables as input and returns an iterator that generates tuples containing elements from each input iterable, grouped together based on their positions. It's worth noting that if the input iterables are of different lengths, zip() will stop generating tuples as soon as the shortest iterable is exhausted. Any remaining elements in the longer iterables will be ignored. You can also convert the zip() result to other data structures like lists or dictionaries, if needed.
 
 
 ## Languages and Libraries
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
-[![pandas](https://img.shields.io/badge/pandas-1.x-orange.svg)](https://pandas.pydata.org/)
-[![matplotlib](https://img.shields.io/badge/matplotlib-3.x-green.svg)](https://matplotlib.org/)
-[![Google Colab](https://img.shields.io/badge/Google%20Colab-blueviolet.svg)](https://colab.research.google.com/)
-[![Logistic Regression](https://img.shields.io/badge/Logistic%20Regression-red.svg)](https://en.wikipedia.org/wiki/Logistic_regression)
-[![Neural Networks](https://img.shields.io/badge/Neural%20Networks-yellow.svg)](https://en.wikipedia.org/wiki/Artificial_neural_network)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
-[![SQLite3](https://img.shields.io/badge/SQLite-3.x-blue.svg)](https://www.sqlite.org/index.html)
-[![Random Forest](https://img.shields.io/badge/Random_Forest-Machine_Learning-green)](https://en.wikipedia.org/wiki/Random_forest)
-[![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-Machine_Learning-blue)](https://scikit-learn.org/)
-[![Tableau](https://img.shields.io/badge/Tableau-Data_Visualization-orange)](https://www.tableau.com/)
-
