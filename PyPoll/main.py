@@ -1,48 +1,52 @@
+# Read the CSV file
 import os
 import csv
+from file_path import path
 
-election = os.path.join(r"C:\Users\ericj\Desktop\Data_Analytics_2022\Data_Analytics_2022\Python-Challenge\PyPoll", "Resources", "election_data.csv")
-# For reading the csv data
-results = open("C:\Users\ericj\Desktop\Data_Analytics_2022\Data_Analytics_2022\Python-Challenge\PyPoll\Analysis", "w")
-# For writing the results in txt
 
-with open(election, 'r') as electioncsv:
-    pypollreader = csv.reader(electioncsv, delimiter=',')
-    total_vote = []
-    # Record all votes in terms of candidate name
-    candidate_list = []
-    # Record the unique names
-        
-    header = next(pypollreader)
-    # Skip the header
+read_path = os.path.join(path, "Resources", "election_data.csv")
+write_path = os.path.join(path, "Analysis", "election_results.txt")
 
-    for row in pypollreader:
-        total_vote.append(row[2])
 
-        if row[2] not in candidate_list:
-            candidate_list.append(row[2])
-            # Add the candidate name to the candidate_list if unique
-
-total_number_votes = int(len(total_vote))
-
-print('Election Results:')
-results.write('Election Results:\n')
-print(f"The total number of votes was: {total_number_votes} votes")
-results.write(f"The total number of votes was: {total_number_votes} votes\n")
-
-vote_per_candidate = {}
-winner = 0
-
-for list in candidate_list:
-    vote_per_candidate[list] = total_vote.count(list)
-    # This creates a dictionary with the candidate names as keys and the count of votes each candidate received as values. Ref line 12.
-    if total_vote.count(list) > winner:
-        winner = total_vote.count(list)
-        winning_candidate = list
-        # Loop to find the winning candidate based on the number of votes
-    
-    print(f"Candidate {list} received {total_vote.count(list)} votes, which makes up {round(int(total_vote.count(list))/ total_number_votes * 100, 2)}% of the total votes.")
-    results.write(f"Candidate {list} received {total_vote.count(list)} votes, which makes up {round(int(total_vote.count(list))/ total_number_votes * 100, 2)}% of the total votes.\n")
+def initial():
+    with open(read_path, 'r') as read_store:
+        read_reader = csv.reader(read_store, delimiter=",")
+        header = next(read_reader)
+        total_votes = 0
+        candidates = []
+        counties = []
+        for row in read_reader:
+            if row[2] not in candidates:
+                candidates.append(row[2])
+            if row[1] not in counties:
+                counties.append(row[1])
+            total_votes += 1
+        build_dict(candidates, counties)
    
-print(f"The winning candidate is {winning_candidate}. Congratulations!")
-results.write(f"The winning candidate is {winning_candidate}. Congratulations!")
+
+def build_dict(candidates, counties):
+    with open(read_path, 'r') as read_store:
+        read_reader = csv.reader(read_store, delimiter=",")
+        header = next(read_reader)
+        dict = {county: {candidate: 0 for candidate in candidates} for county in counties}
+        for row in read_reader:
+            county = row[1]
+            candidate = row[2]
+            dict[county][candidate] += 1
+        calculate_statistics(dict)
+
+
+def calculate_statistics(dict):
+    with open(write_path, "w") as write_store:
+        for county, candidate_votes in dict.items():
+            total_votes_by_county = sum(candidate_votes.values())
+            write_store.write(f'County: {county}\n')
+            write_store.write(f'Total number of votes in the county: {total_votes_by_county}\n')
+            for candidate, votes in candidate_votes.items():
+                percentage_of_vote = round(votes/total_votes_by_county*100, 2)
+                write_store.write(f'Candidate name: {candidate}\n')
+                write_store.write(f'Candidate number of votes: {votes}\n')
+                write_store.write(f'Candidate vote in percentage: {percentage_of_vote}%\n\n')
+
+
+initial()
