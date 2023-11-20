@@ -4,12 +4,26 @@
 
 ## Overview
 
-This simple project is to demonstrate how [Python](https://www.python.org/) can be used to load and analyze CSV data without the help of [Pandas](https://pandas.pydata.org/).
+This simple project is to demonstrate how [Python](https://www.python.org/) can be used to load and analyze CSV data without the help of [Pandas](https://pandas.pydata.org/). Outputs were created in the form of txt files with simple analyses of data.
 
 Two different sets of data were used:
 
 - [budget_data.csv](https://github.com/ericyang91/Python_Analysis_of_Financial_and_Election_Data/blob/main/PyBank/Resources/budget_data.csv) 
 - [election_data.csv](https://github.com/ericyang91/Python_Analysis_of_Financial_and_Election_Data/blob/main/PyPoll/Resources/election_data.csv)
+
+## Questions Answered:
+
+- PyBank:
+  - What is the total number of months represented in the data set?
+  - What is the net total amount of profit/loss over the entire period?
+  - What is the average of changes in profit/loss?
+  - When was the greatest increase in profits? What was the amount?
+  - When was the greatest decrease in profits? What was the amount?
+ - PyPoll:
+   - List the county names where the election took place.
+   - List the candidate names in each of these counties.
+   - How many votes did each candidate receive in each of the counties?
+   - What percentage of the votes did each candidate receive in each of the counties?
 
 ## Functions Used
 
