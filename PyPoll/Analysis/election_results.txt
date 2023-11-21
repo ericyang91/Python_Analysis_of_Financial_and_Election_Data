@@ -1,3 +1,7 @@
+Charles Casper Stockham received 85213 votes in total.
+Diana DeGette received 272892 votes in total.
+Raymon Anthony Doane received 11606 votes in total.
+
 County: Jefferson
 Total number of votes in the county: 38855
 Candidate name: Charles Casper Stockham
@@ -11,6 +15,7 @@ Candidate vote in percentage: 46.23%
 Candidate name: Raymon Anthony Doane
 Candidate number of votes: 1169
 Candidate vote in percentage: 3.01%
+
 
 County: Denver
 Total number of votes in the county: 306055
@@ -26,6 +31,7 @@ Candidate name: Raymon Anthony Doane
 Candidate number of votes: 9585
 Candidate vote in percentage: 3.13%
 
+
 County: Arapahoe
 Total number of votes in the county: 24801
 Candidate name: Charles Casper Stockham
@@ -40,3 +46,4 @@ Candidate name: Raymon Anthony Doane
 Candidate number of votes: 852
 Candidate vote in percentage: 3.44%
 
+Congratulations to Diana DeGette for winning this year's election!
