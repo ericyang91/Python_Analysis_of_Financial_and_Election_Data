@@ -42,7 +42,7 @@ def build_dict(candidates, counties):
 
 def calculate_statistics(dict, votes, candidates):
     with open(write_path, "w") as write_store: # Prepare a writing object
-        winning_candidate = max(candidates, key=lambda candidate: votes.count(candidate))
+        winning_candidate = max(candidates, key=lambda candidate: votes.count(candidate)) # Use the optional argument 'key' to use votes.count(candidate) as the value of interest
         for candidate in candidates:
             write_store.write(f"{candidate} received {votes.count(candidate)} votes in total.\n") # Finding the total vote each candidate received
         for county, candidate_votes in dict.items(): # The method dictionary.items() returns iterable key-value pairs. In this case, it iterates over the outer dictionary
