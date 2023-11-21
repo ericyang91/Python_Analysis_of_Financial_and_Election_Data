@@ -32,6 +32,7 @@ Two different sets of data were used:
 - `with` Once the code within the with block is executed, the file will be automatically closed, regardless of whether an exception occurs or not. This ensures proper cleanup and prevents resource leaks.
 - `next()` is used to retrieve the next item from an iterator. It allows you to iterate over the elements of an iterable one at a time. It cannot be used on lists.
 - `zip()` is used to combine multiple iterables into a single iterable of tuples. It takes iterables as input and returns an iterator that generates tuples containing elements from each input iterable, grouped together based on their positions. It's worth noting that if the input iterables are of different lengths, zip() will stop generating tuples as soon as the shortest iterable is exhausted. Any remaining elements in the longer iterables will be ignored. You can also convert the zip() result to other data structures like lists or dictionaries, if needed.
+- `max(iterable, key)` the optional argument, 'key' is used to calculate a value to determine the "key" for each element. The maximum element is then selected based on these key values.
 
 
 ## Languages and Libraries
