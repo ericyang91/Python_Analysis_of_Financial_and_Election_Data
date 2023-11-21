@@ -24,6 +24,7 @@ Two different sets of data were used:
    - List the candidate names in each of these counties.
    - How many votes did each candidate receive in each of the counties?
    - What percentage of the votes did each candidate receive in each of the counties?
+   - Who is the winner of the election?
 
 ## Functions Used
 
