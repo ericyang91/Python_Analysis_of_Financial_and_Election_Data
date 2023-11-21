@@ -11,6 +11,10 @@ Two different sets of data were used:
 - [budget_data.csv](https://github.com/ericyang91/Python_Analysis_of_Financial_and_Election_Data/blob/main/PyBank/Resources/budget_data.csv) 
 - [election_data.csv](https://github.com/ericyang91/Python_Analysis_of_Financial_and_Election_Data/blob/main/PyPoll/Resources/election_data.csv)
 
+## Why no Pandas?
+
+This project aims to showcase how common data analysis tasks can be accomplished using fundamental [Python](https://www.python.org/) modules. While [Pandas](https://pandas.pydata.org/) is a powerful tool for data manipulation, this project emphasizes the simplicity and transparency of a pandas-free approach.
+
 ## Questions Answered:
 
 - PyBank:
@@ -33,6 +37,12 @@ Two different sets of data were used:
 - `next()` is used to retrieve the next item from an iterator. It allows you to iterate over the elements of an iterable one at a time. It cannot be used on lists.
 - `zip()` is used to combine multiple iterables into a single iterable of tuples. It takes iterables as input and returns an iterator that generates tuples containing elements from each input iterable, grouped together based on their positions. It's worth noting that if the input iterables are of different lengths, zip() will stop generating tuples as soon as the shortest iterable is exhausted. Any remaining elements in the longer iterables will be ignored. You can also convert the zip() result to other data structures like lists or dictionaries, if needed.
 - `max(iterable, key)` the optional argument, 'key' is used to calculate a value to determine the "key" for each element. The maximum element is then selected based on these key values.
+
+## How to Use:
+
+1. Clone the repository: git clone ``git@github.com:ericyang91/Python_Analysis_of_Financial_and_Election_Data.git``
+2. Run the scripts for each of PyBank and PyPoll: main.py
+3. View the results in Analysis/financial_analysis.txt and Analysis/election_results.txt.
 
 
 ## Languages and Libraries
